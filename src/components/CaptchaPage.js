@@ -36,6 +36,16 @@ const CaptchaPage = () => {
       setSelectedImages([...selectedImages, photo]);
       console.log(selectedImages)
     }
+
+    const handleSubmit = () => {
+      if(selectedImages == 
+    }
+
+
+
+
+
+
   }
     return (
       <>
@@ -74,7 +84,7 @@ const CaptchaPage = () => {
               <IoIosInformationCircle size={30} />
               <MdHeadphones size={30} />
             </div>
-            <button className="confirmButton">Confirm</button>
+            <button className="confirmButton" onClick={handleSubmit}>Confirm</button>
           </div>
         </div>
       </>
