@@ -26,15 +26,17 @@ const CaptchaPage = () => {
   const [selectionType, setSelectionType] = useState("cat");
   const [selectedImages, setSelectedImages] = useState([]);
 
-  const imageClicked = (captchaimages) => {
-    if (selectedImages.includes(captchaimages)) {
+  const imageClicked = (photo) => {
+    if (selectedImages.includes(photo)) {
       setSelectedImages(
-        selectedImages.filter((image) => image !== captchaimages)
-      );
+        selectedImages.filter((image) => image !== photo)
+      )
+      console.log(selectedImages);
     } else {
-      setSelectedImages([...selectedImages, captchaimages]);
+      setSelectedImages([...selectedImages, photo]);
+      console.log(selectedImages)
     }
-
+  }
     return (
       <>
         <div className="captchaMainDiv">
@@ -78,5 +80,4 @@ const CaptchaPage = () => {
       </>
     );
   };
-};
 export default CaptchaPage;
